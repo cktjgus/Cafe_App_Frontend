@@ -1,12 +1,17 @@
+// App.js
 import React from 'react';
-import SeatList from './components/SeatList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Login from './components/Login';
 
 function App() {
   return (
-    <div className="App">
-      <h1>카페 좌석 예약</h1>
-      <SeatList />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
