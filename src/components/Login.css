@@ -1,15 +1,12 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  background-color: #e0e0e0;
-}
-
 .login-wrapper {
-  min-height: 100%;
+  min-height: 100%; /* 뷰포트 기준, 세로 전체 채움 */
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background: #e0e0e0;
+  position: absolute;
+
 }
 
 .login-form {
