@@ -18,16 +18,14 @@
   border: 1px solid #D0D0D0;
 }
 
-.signup-btn {
-  height: 38px;
-  padding: 0 20px;
-  background-color: white;
-  border-radius: 8px;
-  border: 1px solid #D0D0D0;
+.login-btn:hover {
+  background-color: #e0e0e0;
+  border: 1px solid #e0e0e0;
+  
 }
 
 .gray-banner {
-  height: 250px;
+  height: 400px;
   background-color: #e0e0e0;
   position: relative;
 }
@@ -72,10 +70,12 @@
   width: 500px;
 }
 
+/* 드롭다운을 항상 네비게이션 메뉴 기준으로 띄우기 */
 .nav-item {
   position: relative;
 }
 
+/* 드롭다운 메뉴를 body 기준으로가 아닌 nav-item 기준으로 정확하게 위치시킴 */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -90,6 +90,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* 드롭다운은 nav-item 위에 마우스를 올렸을 때만 보이도록 */
 .nav-item:hover .dropdown-menu {
   display: block;
 }
