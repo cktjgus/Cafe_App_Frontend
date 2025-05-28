@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Home.css';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Home.css";
 
 function Home() {
   const navigate = useNavigate();
 
   return (
     <div className="container-fluid px-0">
-
       <main className="home-container">
         <div className="gray-banner">
           <div className="search-card">

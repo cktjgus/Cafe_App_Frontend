@@ -1,10 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import KakaoMap from './components/KakaoMap';
-import Header from './components/Header';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import KakaoMap from "./components/KakaoMap";
+import Header from "./components/Header";
+import CafeList from "./components/CafeList";
+import SeatList from "./components/SeatList";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -13,11 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
         <Route
           path="/map"
           element={
-            <div style={{ width: '100vw', height: '100vh' }}>
+            <div style={{ width: "100vw", height: "100vh" }}>
               <KakaoMap
                 kakaoKey={process.env.REACT_APP_KAKAO_KEY}
                 width="100%"
@@ -27,6 +29,8 @@ function App() {
             </div>
           }
         />
+        <Route path="/cafes" element={<CafeList />} />
+        <Route path="/seats" element={<SeatList />} />
       </Routes>
     </Router>
   );
