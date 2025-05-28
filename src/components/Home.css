@@ -1,7 +1,12 @@
 /* Home.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+}
 
 .home-container {
-  min-height: 100vh;
+  min-height: 100%;
   background-color: #f0f2f5;
 }
 

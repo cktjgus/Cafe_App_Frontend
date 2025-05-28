@@ -25,38 +25,41 @@ function Login() {
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
     } else {
-      login(); // 로그인 상태 변경
-      navigate('/'); // 홈으로 이동
+      login();
+      navigate('/');
     }
   };
 
   return (
-    <div className="container">
-      <form onSubmit={handleSubmit} className="form">
-        <h2>Login</h2>
-        <div className={`form-control ${errors.username ? 'error' : ''}`}>
-          <label htmlFor="username">Username</label>
+    <div className="login-wrapper">
+      <form onSubmit={handleSubmit} className="login-form">
+        <h2>로그인</h2>
+
+        <div className="input-box">
           <input
             type="text"
             id="username"
+            placeholder="아이디를 입력하세요..."
             value={formData.username}
             onChange={handleChange}
-            placeholder="Enter username"
           />
-          <small>{errors.username}</small>
         </div>
-        <div className={`form-control ${errors.password ? 'error' : ''}`}>
-          <label htmlFor="password">Password</label>
+
+        <div className="input-box">
           <input
             type="password"
             id="password"
+            placeholder="비밀번호를 입력하세요..."
             value={formData.password}
             onChange={handleChange}
-            placeholder="Enter password"
           />
-          <small>{errors.password}</small>
         </div>
-        <button type="submit">Login</button>
+
+        <button className="login-button" type="submit">로그인</button>
+
+        <div className="login-links">
+          <span onClick={() => navigate('/Signup')}>회원가입</span>
+        </div>
       </form>
     </div>
   );
