@@ -7,7 +7,6 @@ import KakaoMap from "./components/KakaoMap";
 import Header from "./components/Header";
 import CafeList from "./components/CafeList";
 import SeatList from "./components/SeatList";
-import Signup from "./components/Signup";
 
 function App() {
   return (
