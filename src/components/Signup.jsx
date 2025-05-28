@@ -14,14 +14,12 @@ function Signup() {
   const [errors, setErrors] = useState({});
   const { login } = useAuth();
   const navigate = useNavigate();
-
-  // 🔍 정확히 "01012345678" 형식만 통과
+  
   const isValidPhone = (phone) => /^010\d{8}$/.test(phone.trim());
 
   const isValidEmail = (email) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  // 필드별 유효성 검사
   const validateField = (id, value, allData = formData) => {
     const error = {};
     switch (id) {
@@ -50,7 +48,6 @@ function Signup() {
     return error;
   };
 
-  // 전체 유효성 검사
   const validateAll = (data) => {
     const allErrors = {};
     Object.keys(data).forEach((key) => {
@@ -60,21 +57,17 @@ function Signup() {
     return allErrors;
   };
 
-  // 입력 이벤트
   const handleChange = (e) => {
   const { id, value } = e.target;
   const newData = { ...formData, [id]: value };
   setFormData(newData);
 
-  // 새로 검사
   const newFieldErrors = validateField(id, value, newData);
 
-  // 기존 에러 객체에서 해당 필드 에러만 제거하고, 새 에러 있으면 추가
   const updatedErrors = { ...errors };
   delete updatedErrors[id];
   if (newFieldErrors[id]) updatedErrors[id] = newFieldErrors[id];
   if (id === 'password' || id === 'password2') {
-    // 패스워드가 변경될 때 password2 에러도 같이 처리
     delete updatedErrors['password2'];
     if (newFieldErrors['password2']) updatedErrors['password2'] = newFieldErrors['password2'];
   }
@@ -82,19 +75,17 @@ function Signup() {
 };
 
 
-  // 제출 이벤트
   const handleSubmit = (e) => {
     e.preventDefault();
     const allErrors = validateAll(formData);
     if (Object.keys(allErrors).length > 0) {
       setErrors(allErrors);
     } else {
-      login(); // 실제 회원가입 처리 필요
+      login();
       navigate('/');
     }
   };
 
-  // input 필드 정보 배열로 관리 (코드 가독성 개선)
   const fields = [
     {
       id: 'username',

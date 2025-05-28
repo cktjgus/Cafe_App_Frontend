@@ -114,7 +114,6 @@ body, html {
   color: #000;
 }
 
-/* src/index.css (또는 Home.css 등에) */
 #map {
   position: absolute;
   top: 0; left: 0;
