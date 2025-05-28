@@ -39,7 +39,7 @@ function Login() {
           <input
             type="text"
             id="username"
-            placeholder="아이디를 입력하세요..."
+            placeholder="전화번호를 입력하세요..."
             value={formData.username}
             onChange={handleChange}
           />

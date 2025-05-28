@@ -62,7 +62,6 @@ function Header() {
           </ul>
         </div>
 
-        {/* 우측: 로그인/프로필 */}
         {isLoggedIn ? (
           <div
             className="position-relative"
