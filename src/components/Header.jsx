@@ -49,7 +49,7 @@ function Header() {
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link px-3 text-dark dropdown-toggle">머적지?</a>
+              <a className="nav-link px-3 text-dark dropdown-toggle">FAQ</a>
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item">사용 방법</a>
